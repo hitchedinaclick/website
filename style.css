@@ -1,4 +1,4 @@
-/* Reset & Base */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +6,14 @@
 }
 
 body {
-  font-family: 'Inter', Arial, sans-serif;
-  background-color: #fff;
+  font-family: 'Inter', system-ui, sans-serif;
   color: #111;
-  line-height: 1.6;
+  background-color: #fff;
+  line-height: 1.7;
+  scroll-behavior: smooth;
 }
 
+/* Container */
 .container {
   width: 90%;
   max-width: 1100px;
@@ -23,6 +25,9 @@ body {
   background: #fff;
   border-bottom: 1px solid #eee;
   padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-container {
@@ -34,6 +39,7 @@ body {
 .logo {
   font-size: 1.4rem;
   font-weight: 700;
+  letter-spacing: -0.5px;
   color: #111;
 }
 
@@ -47,106 +53,153 @@ body {
   text-decoration: none;
   color: #333;
   transition: color 0.2s;
+  font-weight: 500;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links .active {
   color: #e54b7a;
 }
 
 /* Hero */
 .hero {
   text-align: center;
-  padding: 6rem 0;
-  background: #fff7f9;
+  padding: 8rem 1rem 6rem;
+  background: linear-gradient(to bottom right, #fff7f9, #ffffff);
 }
 
 .hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.7rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
   color: #555;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
 }
 
 .btn {
   background-color: #e54b7a;
   color: #fff;
-  padding: 0.9rem 2rem;
+  padding: 0.9rem 2.2rem;
   border-radius: 6px;
   text-decoration: none;
-  transition: background 0.2s;
+  font-weight: 600;
+  transition: all 0.25s ease;
 }
 
 .btn:hover {
   background-color: #c93e68;
+  transform: translateY(-2px);
 }
 
-/* About & Portfolio */
-section {
-  padding: 4rem 0;
-  border-bottom: 1px solid #f2f2f2;
-}
-
-h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.about-preview p,
-.portfolio-preview p {
-  color: #555;
-  max-width: 700px;
-  margin-bottom: 1rem;
-}
-
-.link {
+.btn.secondary {
+  background: transparent;
   color: #e54b7a;
-  text-decoration: none;
+  border: 2px solid #e54b7a;
+}
+
+.btn.secondary:hover {
+  background: #e54b7a;
+  color: #fff;
+}
+
+/* Sections */
+section {
+  padding: 5rem 0;
+}
+
+section h3 {
+  font-size: 2rem;
   font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.link:hover {
-  text-decoration: underline;
+section p {
+  text-align: center;
+  color: #555;
+  max-width: 750px;
+  margin: 0.5rem auto;
 }
 
-/* Portfolio Grid */
+/* About */
+.about-preview {
+  background: #fff;
+}
+
+/* Portfolio */
+.portfolio-preview {
+  background: #fafafa;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
 }
 
 .card {
   background: #fff;
-  border: 1px solid #eee;
-  padding: 3rem 1rem;
-  border-radius: 8px;
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h4 {
+  padding: 1rem;
   font-weight: 600;
   color: #333;
-  transition: all 0.2s;
 }
 
 .card:hover {
-  border-color: #e54b7a;
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* Promise */
+.our-promise {
+  background: #fff7f9;
+}
+
+.our-promise p {
+  max-width: 800px;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 /* How It Works */
+.how-it-works {
+  background: #fff;
+}
+
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
+  margin: 3rem 0;
 }
 
 .step h4 {
   color: #e54b7a;
   margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.step p {
+  color: #555;
+  font-size: 1rem;
 }
 
 /* Footer */
@@ -154,21 +207,31 @@ h3 {
   background: #fafafa;
   text-align: center;
   padding: 2rem 0;
-  color: #666;
   font-size: 0.9rem;
+  color: #777;
+}
+
+/* Fade-In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .nav-links {
-    gap: 1rem;
-  }
-
   .hero h2 {
     font-size: 2rem;
   }
 
-  .hero p {
-    font-size: 1rem;
+  .nav-links {
+    gap: 1rem;
   }
 }
