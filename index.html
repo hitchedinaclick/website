@@ -1,98 +1,313 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hitched in a Click | Wedding Photography in Brisbane, Gold Coast & Sunshine Coast</title>
-  <meta name="description" content="Hitched in a Click captures authentic, timeless wedding photography across Brisbane, the Gold Coast, and the Sunshine Coast. Relive your love story with beautifully edited photos, delivered within one month." />
-  <meta name="keywords" content="wedding photography, Brisbane wedding photographer, Gold Coast wedding photography, Sunshine Coast wedding photographer, South East Queensland weddings, candid wedding photography" />
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hitched In A Click — Wedding Photographer Brisbane | Gold Coast | Toowoomba | Sunshine Coast</title>
 
+  <!-- Canonical -->
+  <link rel="canonical" href="https://hitchedinaclick.example/" />
+
+  <!-- Primary meta -->
+  <meta name="description" content="Hitched In A Click — natural, candid wedding photography serving Brisbane, Gold Coast, Toowoomba, Sunshine Coast and South East Queensland. Fast, careful 1-month turnaround for your full edited gallery." />
+  <meta name="keywords" content="wedding photographer Brisbane, wedding photography Gold Coast, Toowoomba wedding photographer, Sunshine Coast wedding photography, South East Queensland wedding photographer, wedding photos Brisbane" />
+  <meta name="author" content="Hitched In A Click" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#111111" />
+  <meta name="geo.region" content="AU-QLD" />
+  <meta name="geo.placename" content="Brisbane" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hitched In A Click — Wedding Photographer Brisbane & South East Queensland" />
+  <meta property="og:description" content="Natural, candid wedding photography across Brisbane, Gold Coast, Toowoomba and Sunshine Coast. 1-month turnaround promise — your memories delivered thoughtfully and swiftly." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Hitched In A Click" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hitched In A Click — Wedding Photography Brisbane & SE Queensland" />
+  <meta name="twitter:description" content="Candid wedding photography across Brisbane, Gold Coast, Toowoomba and Sunshine Coast. 1-month turnaround promise." />
+
+  <!-- Structured data: ProfessionalService + FAQ about turnaround -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://hitchedinaclick.example/#service",
+        "name": "Hitched In A Click",
+        "url": "https://hitchedinaclick.example/",
+        "logo": "https://hitchedinaclick.example/logo.png",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80",
+        "description": "Wedding photography across Brisbane, Gold Coast, Toowoomba, Sunshine Coast and South East Queensland. Natural, candid and timeless images with a one month turnaround promise.",
+        "telephone": "+61-400-000-000",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brisbane",
+          "addressRegion": "QLD",
+          "addressCountry": "AU"
+        },
+        "areaServed": [
+          "Brisbane",
+          "Gold Coast",
+          "Toowoomba",
+          "Sunshine Coast",
+          "South East Queensland"
+        ],
+        "sameAs": [
+          "https://instagram.com/hitchedinaclick",
+          "https://facebook.com/hitchedinaclick"
+        ],
+        "service": {
+          "@type": "Service",
+          "name": "Wedding Photography",
+          "description": "Full-day, elopement and bespoke wedding photography across South East Queensland. Includes an online gallery, high-resolution images and print options."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://hitchedinaclick.example/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is your turnaround time for the full edited gallery?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We promise to deliver your full edited wedding gallery within one month after final selections are confirmed. If unforeseen circumstances occur we'll communicate a new timeline promptly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which areas do you photograph?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We photograph weddings across Brisbane, Gold Coast, Toowoomba, Sunshine Coast and other locations within South East Queensland. Travel options are available for regional and interstate weddings."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts & Preconnect -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <h1 class="logo">Hitched in a Click</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">Hitched <span>In A Click</span></a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#areas">Areas We Serve</a></li>
+          <li><a href="#turnaround">1-Month Promise</a></li>
+          <li><a href="#contact" class="cta">Contact</a></li>
         </ul>
       </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-content">
-      <h2>Your Wedding Story, Captured Beautifully</h2>
-      <p>Modern, candid wedding photography for couples who value genuine moments. Based in Brisbane and capturing love stories across the Gold Coast, Sunshine Coast, and beyond.</p>
-      <a href="contact.html" class="btn">Let's Chat</a>
-    </div>
-  </section>
-
-  <!-- About Preview -->
-  <section class="about-preview">
-    <div class="container fade-in">
-      <h3>Real Moments, Real Emotions</h3>
-      <p>We don’t just take photos — we tell your story. Every laugh, every tear, every quiet in-between moment is captured with honesty and care. Because your wedding deserves to be remembered exactly as it felt.</p>
-      <a href="about.html" class="link">Meet the Photographer →</a>
-    </div>
-  </section>
-
-  <!-- Portfolio Preview -->
-  <section class="portfolio-preview">
-    <div class="container fade-in">
-      <h3>Our Work</h3>
-      <p>Every couple’s story is different, but the feeling is always the same — love, joy, and connection. Take a look through some of our favourite wedding moments across South East Queensland.</p>
-      <div class="grid">
-        <div class="card"><img src="images/brisbane-wedding.jpg" alt="Brisbane Wedding Photography"><h4>Brisbane Weddings</h4></div>
-        <div class="card"><img src="images/goldcoast-wedding.jpg" alt="Gold Coast Wedding Photography"><h4>Gold Coast Weddings</h4></div>
-        <div class="card"><img src="images/sunshinecoast-wedding.jpg" alt="Sunshine Coast Wedding Photography"><h4>Sunshine Coast Weddings</h4></div>
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-label="Intro">
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1800&q=80')"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>Hitched In A Click — Wedding Photographer in Brisbane & South East Queensland</h1>
+        <p class="subtitle">Natural, candid and timeless wedding photography across Brisbane, Gold Coast, Toowoomba and the Sunshine Coast.</p>
+        <p><a class="btn" href="#portfolio">View Portfolio</a></p>
       </div>
-      <a href="portfolio.html" class="link">View Full Gallery →</a>
-    </div>
-  </section>
+    </section>
 
-  <!-- Our Promise Section -->
-  <section class="our-promise">
-    <div class="container fade-in">
-      <h3>Our Promise to You</h3>
-      <p>Your memories matter — deeply. That’s why we guarantee your full wedding gallery within <strong>one month</strong> of your big day. So you can relive every moment while the feelings are still fresh.</p>
-      <p>Because to us, photography isn’t just about beautiful pictures — it’s about preserving the laughter, the chaos, and the love that makes your story yours.</p>
-    </div>
-  </section>
+    <!-- Portfolio -->
+    <section id="portfolio" class="container section portfolio">
+      <header class="section-header">
+        <h2>Portfolio — real weddings in Brisbane, Gold Coast & Sunshine Coast</h2>
+        <p>Selected moments captured across venues and beaches throughout South East Queensland.</p>
+      </header>
 
-  <!-- How It Works -->
-  <section class="how-it-works">
-    <div class="container fade-in">
-      <h3>The Experience</h3>
-      <div class="steps">
-        <div class="step">
-          <h4>1. Enquire</h4>
-          <p>Send us your details, date, and vision. We’ll check availability and tailor a package that fits you perfectly.</p>
-        </div>
-        <div class="step">
-          <h4>2. Celebrate</h4>
-          <p>Enjoy your day while we capture every candid, heartfelt moment — no awkward poses, no pressure.</p>
-        </div>
-        <div class="step">
-          <h4>3. Relive</h4>
-          <p>Your gallery arrives within a month, beautifully edited and ready to share, print, and cherish forever.</p>
+      <div class="gallery" aria-live="polite">
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=60" 
+               data-full="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=2000&q=80"
+               alt="Bride and groom embracing at a Brisbane wedding" loading="lazy">
+          <figcaption>Brisbane — intimate city wedding</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=60"
+               data-full="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=2000&q=80"
+               alt="Bride getting ready on the Gold Coast" loading="lazy">
+          <figcaption>Gold Coast — getting ready</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=60"
+               data-full="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=2000&q=80"
+               alt="Rings closeup from a Toowoomba wedding" loading="lazy">
+          <figcaption>Toowoomba — detail shots</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1509587584298-0f9d6bced3d6?auto=format&fit=crop&w=800&q=60"
+               data-full="https://images.unsplash.com/photo-1509587584298-0f9d6bced3d6?auto=format&fit=crop&w=2000&q=80"
+               alt="Couple portrait at sunset on the Sunshine Coast" loading="lazy">
+          <figcaption>Sunshine Coast — sunset portraits</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container section about">
+      <div class="about-grid">
+        <div class="about-photo" aria-hidden="true" style="background-image: url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1200&q=80')"></div>
+        <div class="about-text">
+          <h2>About Hitched In A Click</h2>
+          <p>Hi — I'm Alex, the lead photographer behind Hitched In A Click. Based in Brisbane, I photograph weddings across South East Queensland with a focus on warm, emotional storytelling. I blend candid documentary moments with elegant portraits to create a complete narrative of your day.</p>
+          <ul class="features">
+            <li>Natural light & unobtrusive direction</li>
+            <li>Full-day and elopement packages</li>
+            <li>Custom albums, prints & heirloom options</li>
+          </ul>
+          <p><a class="btn-outline" href="#contact">Book a Consultation</a></p>
         </div>
       </div>
-      <a href="contact.html" class="btn secondary">Enquire Now</a>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+    <!-- Services -->
+    <section id="services" class="container section services">
+      <header class="section-header">
+        <h2>Services & Packages — Brisbane & SE Queensland</h2>
+        <p>Bespoke wedding photography packages that suit elopements, intimate gatherings and full-day celebrations.</p>
+      </header>
+      <div class="cards">
+        <article class="card">
+          <h3>Elopement</h3>
+          <p class="price">$1,200</p>
+          <ul>
+            <li>2 hours coverage</li>
+            <li>Online gallery</li>
+            <li>20 edited images</li>
+          </ul>
+        </article>
+
+        <article class="card featured">
+          <h3>Full Day</h3>
+          <p class="price">$3,500</p>
+          <ul>
+            <li>8+ hours coverage</li>
+            <li>Complimentary engagement session</li>
+            <li>High-res gallery & print credits</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Custom</h3>
+          <p class="price">Varies</p>
+          <ul>
+            <li>Partial-day options</li>
+            <li>Albums & second shooter</li>
+            <li>Travel packages</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Areas served -->
+    <section id="areas" class="container section areas-served">
+      <header class="section-header">
+        <h2>Areas We Serve</h2>
+        <p>We proudly photograph weddings across South East Queensland including:</p>
+      </header>
+      <ul>
+        <li>Brisbane — inner city, riverside and hinterland venues</li>
+        <li>Gold Coast — beaches, hinterland and beachfront venues</li>
+        <li>Toowoomba — gardens, country estates and intimate venues</li>
+        <li>Sunshine Coast — coastal, hinterland and boutique locations</li>
+        <li>Other South East Queensland locations — available for travel</li>
+      </ul>
+    </section>
+
+    <!-- Sentimental 1-month turnaround -->
+    <section id="turnaround" class="container section turnaround">
+      <header class="section-header">
+        <h2>Our 1-Month Promise</h2>
+        <p>Because your wedding photos are more than pictures — they are the memories you return to for a lifetime.</p>
+      </header>
+      <div class="turnaround-content">
+        <p>We understand how much your wedding images mean: the quiet hug, the tear on a cheek, the way the light found you at golden hour. Those moments become part of your family's story. We treat each image with the care it deserves — gentle editing, colour accuracy, and thoughtful sequencing.</p>
+        <p>Our promise: once your wedding is photographed and selections are final, we will deliver your full edited gallery within one month. Not rushed — edited carefully, refined and prepared so each photograph reads true to the moment it holds.</p>
+        <p class="muted">If something unexpected occurs and we can't meet the one-month window, we'll contact you immediately with an honest update and a revised timeline. Your memories deserve clarity and care.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container section contact">
+      <header class="section-header">
+        <h2>Contact & Availability</h2>
+        <p>Let's talk about your wedding day — availability in Brisbane, Gold Coast, Toowoomba, Sunshine Coast and beyond.</p>
+      </header>
+
+      <div class="contact-grid">
+        <form class="contact-form" action="mailto:hello@hitchedinaclick.example" method="post" enctype="text/plain">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="date">Wedding date</label>
+          <input id="date" name="date" type="date">
+
+          <label for="location">Wedding location (venue / city)</label>
+          <input id="location" name="location" type="text" placeholder="e.g., Brisbane City Botanic Gardens">
+
+          <label for="message">Tell me about your day</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+
+        <aside class="contact-info" aria-labelledby="contact-info-heading">
+          <h3 id="contact-info-heading">Studio</h3>
+          <p>Email: <a href="mailto:hello@hitchedinaclick.example">hello@hitchedinaclick.example</a></p>
+          <p>Phone: <a href="tel:+61400000000">+61 400 000 000</a></p>
+          <p>Based in Brisbane — available across South East Queensland.</p>
+          <div class="social">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Pinterest">Pinterest</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Hitched in a Click | Wedding Photography in Brisbane, Gold Coast & Sunshine Coast</p>
+      <p>© <span id="year"></span> Hitched In A Click — Wedding Photography in Brisbane & South East Queensland.</p>
     </div>
   </footer>
+
+  <!-- Lightbox / small JS -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <div class="lb-content">
+      <img src="" alt="">
+    </div>
+    <button class="lb-next" aria-label="Next">›</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
